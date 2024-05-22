@@ -2,7 +2,7 @@ import React from "react";
 import curiousity from "../images/desktop/image-interactive.jpg";
 export default function VR() {
   return (
-    <div className="vr">
+    <section className="vr">
       <img src={curiousity} alt="curiousity" />
       <div className="vr_details">
         <div className="vr_detail">
@@ -15,6 +15,6 @@ export default function VR() {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

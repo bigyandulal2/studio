@@ -5,7 +5,7 @@ import twitter from "../images/icon-twitter.svg";
 import pinterest from "../images/icon-pinterest.svg";
 export default function Footer() {
   return (
-    <div className="footer">
+    <footer className="footer">
       <div className="footer_item1">
         <img src={Logo} alt="logo" />
         <ul className="footer_item1_list">
@@ -27,6 +27,6 @@ export default function Footer() {
           Loop Studios &copy; All rights reserved.
         </p>
       </div>
-    </div>
+    </footer>
   );
 }
