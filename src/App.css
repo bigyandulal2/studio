@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+:root {
+  --blue: #1e90ff;
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+  --Dark_Gray: hsl(0, 0%, 55%);
+  --Very_Dark_Gray: hsl(0, 0%, 41%);
+  --padding: 2rem; /* Added semicolon and removed 'var' */
+  --gap: 2rem;
+
+  --margin: 2rem;
+}
+
+/* for accessing this var(--blue) */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
+
+.app {
+  /* Background linear gradient */
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.6),
+      rgba(255, 255, 255, 0)
+    ),
+    url(images/desktop/image-hero.jpg); /* Check URL */
+
+  /* Other styles */
+  height: 90vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: var(--padding) calc(var(--padding) * 2);
+}
+
+/* navbar starts */
+.navbar {
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: calc(var(--padding) * 1) calc(var(--padding));
+}
+.navbar img {
+  padding-left: calc(var(--padding) * 3);
+}
+.navbar nav {
+  display: flex;
+  list-style: none;
+  font-size: 1.3rem;
+  justify-content: space-evenly;
+  /* background-color: orange; */
+  gap: var(--gap);
+  color: var(--White);
+}
+.navbar nav li {
+  opacity: 0.7;
+}
+.navbar nav li:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.menu {
+  display: none;
+}
+.close {
+  display: none;
+}
+/* navbar section ends */
+/* hero section  */
+.hero {
+  padding: calc(var(--padding) * 3) calc(var(--padding) * 4);
+}
+.hero_box {
+  border: 2px solid var(--White);
+  width: 40rem;
+  padding: calc(var(--padding) * 1);
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+.hero_box p {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 4rem;
+  color: var(--White);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+/* vr section starts */
+.vr {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: calc(var(--padding) * 3);
+}
+
+.vr_details {
+  position: relative;
+  font-family: "Josefin Sans", sans-serif;
+}
+.vr_detail {
+  background-color: var(--White);
+  position: absolute;
+  bottom: -1%;
+  left: -9vw;
+  padding: var(--padding) calc(var(--padding) * 1.5);
+}
+.vr_detail h4 {
+  font-size: 3rem;
+  margin: 1rem 0;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.vr_detail p {
+  font-size: 1rem;
+  color: var(--Dark_Gray);
+  line-height: 1.2;
+  font-weight: 400;
+}
+/* creation starts */
+.creation {
+  padding: var(--padding) calc(var(--padding) * 3);
+  /* background-color: red; */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.creation1 {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Josefin Sans", sans-serif;
+}
+.creation1 h3 {
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.creation1 button {
+  padding: 0.6rem 3rem;
+  background-color: var(--Black);
+  border: none;
+  color: var(--White);
+  font-size: 1.2rem;
+  letter-spacing: 1.9px;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+.creation1 button:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.creation2 {
+  margin: 4rem 0;
+}
+.card_items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.card {
+  position: relative;
+  font-family: "Josefin Sans", sans-serif;
+  transition: all 0.4s;
+}
+.card:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+}
+.mobile_img {
+  display: none;
+}
+.card:hover h4,
+.card h4:hover {
+  color: var(--Black);
+}
+.card:hover img {
+  opacity: 0.3;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+}
+.card h4 {
+  width: 60%;
+  position: absolute;
+  bottom: 50px;
+  left: 40px;
+  text-align: center;
+  line-height: 1.4;
+  /* z-index: 111; */
+  font-size: 2rem;
+  color: white;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+/* footer section starts */
+.footer {
+  background-color: var(--Black);
+  padding: calc(var(--padding) * 3);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: var(--White);
+}
+.footer_item1_list {
+  display: flex;
+  gap: var(--gap);
+  list-style: none;
+  font-size: 1.2rem;
+  /* margin: 1rem 0; */
+}
+.footer_item1_list li {
+  padding: 1rem 0;
+}
+.footer_item1_list li:hover {
+  cursor: pointer;
+  box-shadow: 0px 2px 0px var(--White);
+}
+.footer_item2_list {
+  display: flex;
+  gap: calc(var(--gap) / 2);
+}
+.footer_item2_list img {
+  padding: 1rem 0;
+}
+.footer_item2_list img:hover {
+  box-shadow: 0px 2px 0px var(--White);
+  cursor: pointer;
+}
+
+.footer_rights {
+  font-size: 1rem;
+  color: var(--Dark_Gray);
+}
+/* since this is scratch project i didn't try to do reusability  */
